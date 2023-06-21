@@ -8,39 +8,40 @@
  */
 void f_push(stack_t **head, unsigned int counter)
 {
-	if (bus.arg == NULL)
-	{
-		fprintf(stderr, "L%d: usage: push integer\n", counter);
-		exit(EXIT_FAILURE);
-	}
+int i = 0;
+int flag = 0;
+char *arg = bus.arg;
+int n;
 
-	int j = 0;
-	int flag = 0;
-	char *arg = bus.arg;
+if (bus.arg == NULL)
+{
+fprintf(stderr, "L%d: usage: push integer\n", counter);
+exit(EXIT_FAILURE);
+}
 
-	if (arg[0] == '-')
-		j++;
+if (arg[0] == '-')
+i++;
 
-	while (arg[j] != '\0')
-	{
-		if (arg[j] < '0' || arg[j] > '9')
-		{
-			flag = 1;
-			break;
-		}
-		j++;
-	}
+while (arg[i] != '\0')
+{
+if (arg[i] < '0' || arg[i] > '9')
+{
+flag = 1;
+break;
+}
+i++;
+}
 
-	if (flag == 1)
-	{
-		fprintf(stderr, "L%d: usage: push integer\n", counter);
-		exit(EXIT_FAILURE);
-	}
+if (flag == 1)
+{
+fprintf(stderr, "L%d: usage: push integer\n", counter);
+exit(EXIT_FAILURE);
+}
 
-	int n = atoi(arg);
+n = atoi(arg);
 
-	if (bus.lifi == 0)
-		addnode(head, n);
-	else
-		addqueue(head, n);
+if (bus.lifi == 0)
+addnode(head, n);
+else
+addqueue(head, n);
 }
