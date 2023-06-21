@@ -9,8 +9,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/* Structures */
 
+/* Structures */
 /**
  * struct stack_s - Doubly linked list representation of a stack (or queue)
  * @n: Integer value of the node
@@ -28,8 +28,8 @@ typedef struct stack_s
 /**
  * struct bus_s - variables -args, file, line content
  * @arg: value
- * @file: pointer to monty file
- * @content: line content
+ * @file: monty file pointer
+ * @content: content of line
  * @lifi: flag change stack <-> queue
  * Description: carries values through the program
  */
@@ -63,8 +63,22 @@ typedef struct instruction_s
 void f_push(stack_t **head, unsigned int counter);
 void f_pall(stack_t **head, unsigned int counter);
 int main(int argc, char *argv[]);
-
-
+void f_add(stack_t **head, unsigned int counter);
+void f_div(stack_t **head, unsigned int counter);
+void f_mod(stack_t **head, unsigned int counter);
+void f_mul(stack_t **head, unsigned int counter);
+void f_nop(stack_t **head, unsigned int counter);
+void f_pint(stack_t **head, unsigned int counter);
+void f_pop(stack_t **head, unsigned int counter);
+void f_push(stack_t **head, unsigned int counter);
+void f_sub(stack_t **head, unsigned int counter);
+void f_swap(stack_t **head, unsigned int counter)
+void f_pchar(stack_t **head, unsigned int counter);
+void f_pstr(stack_t **head, unsigned int counter);
+void f_rotl(stack_t **head, unsigned int counter);
+void f_rotr(stack_t **head, __attribute__((unused)) unsigned int counter);
+void f_queue(stack_t **head, unsigned int counter);
+void f_stack(stack_t **head, unsigned int counter);
 
 
 /* Other Utility Functions */
