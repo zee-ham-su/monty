@@ -10,6 +10,7 @@ stack_t *current = head;
 stack_t *temp = current;
 while (current != NULL)
 {
+temp = current;
 current = current->next;
 free(temp);
 }
