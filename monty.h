@@ -43,14 +43,14 @@ typedef struct bus_s
 	char *content;
 	int lifi;
 } bus_t;
-
-extern bus_t bus;
+bus_t bus;
 
 
 /**
- * struct instruction_s - opcode and function
+ * struct instruction_s - opcode and its function
  * @opcode: the opcode
  * @f: function to handle the opcode
+ *
  * Description: opcode and its function
  * for stack, queues, LIFO, FIFO Holberton project
  */
