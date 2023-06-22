@@ -39,8 +39,10 @@ typedef struct bus_s
 	FILE *file;
 	char *content;
 	int lifi;
-}  bus_t;
+} bus_t;
+
 extern bus_t bus;
+
 
 /**
  * struct instruction_s - opcode and its function
@@ -72,7 +74,7 @@ void f_pint(stack_t **head, unsigned int counter);
 void f_pop(stack_t **head, unsigned int counter);
 void f_push(stack_t **head, unsigned int counter);
 void f_sub(stack_t **head, unsigned int counter);
-void f_swap(stack_t **head, unsigned int counter)
+void f_swap(stack_t **head, unsigned int counter);
 void f_pchar(stack_t **head, unsigned int counter);
 void f_pstr(stack_t **head, unsigned int counter);
 void f_rotl(stack_t **head, unsigned int counter);
@@ -86,9 +88,6 @@ void addnode(stack_t **head, int n);
 void addqueue(stack_t **head, int n);
 void free_stack(stack_t *head);
 int execute(char *content, stack_t **stack, unsigned int counter, FILE *file);
-
-
-
 
 
 #endif /* MONTY_H */
