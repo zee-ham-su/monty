@@ -15,7 +15,7 @@ int n;
 
 if (bus.arg == NULL)
 {
-fprintf(stderr, "Line %u: usage: push integer\n", counter);
+fprintf(stderr, "L%d: usage: push integer\n", counter);
 exit(EXIT_FAILURE);
 }
 
@@ -34,7 +34,7 @@ i++;
 
 if (flag == 1)
 {
-fprintf(stderr, "Line %u: usage: push integer\n", counter);
+fprintf(stderr, "L%d: usage: push integer\n", counter);
 exit(EXIT_FAILURE);
 }
 
