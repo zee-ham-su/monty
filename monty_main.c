@@ -31,6 +31,7 @@ exit(EXIT_FAILURE);
 }
 
 bus.file = file;
+
 while (fgets(content, sizeof(content), file))
 {
 if (content[strlen(content) - 1] == '\n')

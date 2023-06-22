@@ -17,6 +17,8 @@
  * @n: Integer value of the node
  * @prev: Pointer to the previous element in the stack (or queue)
  * @next: Pointer to the next element in the stack (or queue)
+ * Description: doubly linked list node structure
+ * for stack, queues, LIFO, FIFO
  */
 typedef struct stack_s
 {
@@ -89,6 +91,6 @@ void addnode(stack_t **head, int n);
 void addqueue(stack_t **head, int n);
 void free_stack(stack_t *head);
 int execute(char *content, stack_t **stack, unsigned int counter, FILE *file);
-
+void init_bus(void);
 
 #endif /* MONTY_H */

@@ -9,11 +9,14 @@
 void f_sub(stack_t **head, unsigned int counter)
 {
 stack_t *current;
-int difference, node_count;
-
+int difference;
+int node_count = 0;
 current = *head;
-for (node_count = 0; aux != NULL; node_count++)
-aux = current->next;
+while (current != NULL)
+{
+current = current->next;
+node_count++;
+}
 
 if (node_count < 2)
 {
@@ -24,7 +27,7 @@ free_stack(*head);
 exit(EXIT_FAILURE);
 }
 
-aux = *head;
+current = *head;
 difference = current->next->n - current->n;
 current->next->n = difference;
 *head = current->next;
