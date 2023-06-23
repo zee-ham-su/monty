@@ -18,7 +18,6 @@ bus.content = NULL;
 if (top == NULL || top->next == NULL)
 {
 fprintf(stderr, "L%d: can't add, stack too short\n", counter);
-fclose(bus.file);
 free(bus.content);
 free_stack(*head);
 exit(EXIT_FAILURE);
