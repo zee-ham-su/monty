@@ -45,7 +45,6 @@ i++;
 }
 fprintf(stderr, "L%d: unknown instruction %s\n", counter, op);
 fclose(file);
-free(content);
 free_stack(*stack);
 exit(EXIT_FAILURE);
 }
