@@ -32,6 +32,7 @@ unsigned int i = 0;
 char *op;
 op = strtok(content, " \n\t");
 if (op != NULL && op[0] != '#')
+return (0);
 {
 bus.arg = strtok(NULL, " \n\t");
 while (opst[i].opcode != NULL)
